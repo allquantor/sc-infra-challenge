@@ -77,7 +77,7 @@ Dockerize a given application `publisher.jar`. Write a basic application in a la
     C_TARGET_PORT // Client App Port (Default 9011)
     C_DATA_PATH // Path to data.csv (Default "data.csv")
   ```
-    * The `publisher` Can be started socketpublisher.jar (`java -jar socketpublisher.jar`)
+    * The `publisher` Can be started with (`java -jar publisher.jar`)
     * Java 8 is required
     * The `publisher` require demo data, is inside of `./data/`  
 
