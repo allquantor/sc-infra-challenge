@@ -6,7 +6,7 @@
 **Assignment:**
 
 Dockerize a given application `publisher.jar`. Write a basic application in a language of your choice to listen and write the 
- input sent by `publisher`. Your written application should be dockerized as well. A load balancer should distribute the load
+ input sent by `publisher` in a text file. Your written application should be dockerized as well. A load balancer should distribute the load
   produced by the `publisher` to N instances of your application.
   
 
