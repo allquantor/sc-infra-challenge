@@ -5,10 +5,8 @@
  
 **Assignment:**
 
-Dockerize a given application `publisher.jar`. Write a basic application in a language of your choice to listen and write the 
- input sent by `publisher` in a text file. Your written application should be dockerized as well. A load balancer should distribute the load
-  produced by the `publisher` to N instances of your application.
-  
+Write an application `Consumer` to consume and write (inside of a text file) the requests made by the `Publisher` (`publisher.jar`). Dockerize both `Publisher` && `Consumer`. Connect the Docker containers. `Consumer` should be able to run N instances.
+
 
    
     Setup
@@ -23,7 +21,7 @@ Dockerize a given application `publisher.jar`. Write a basic application in a la
                                                             |
         +----------+                   +--------------+     |      +----------+
         |          |     messages      |              |     |      |          |
-        |publisher --------------------> loadbalancer  -----+-------> app2    +
+        |publisher --------------------> ??????????    -----+-------> app2    +
         |          |                   |              |     |      |          |
         +----------+                   +--------------+     |      +----------+
                                                             |                               -
@@ -47,11 +45,10 @@ Dockerize a given application `publisher.jar`. Write a basic application in a la
 
 2. User stories:
 
-* Your App should receive messages on address and port you specify as ENV Variables in the environment `publisher.jar` will run. 
+* Your App should receive messages on address and port that you have to  specify as Environment Variables.
 ( Hint: _A dockerized Bash Script with netcat would be enough._)
-* Your App should simply write the messages inside a text file.
-* Your should Dockerize your app as well as the `publisher` app.
-* A load balancer should distribute the load on your apps coming from the `publisher`.
+* Your App should write the messages inside a text file.
+* Rollout should be made by starting of one file/binary...
 
 3. Specifications:
 
@@ -77,16 +74,16 @@ Dockerize a given application `publisher.jar`. Write a basic application in a la
     C_TARGET_PORT // Client App Port (Default 9011)
     C_DATA_PATH // Path to data.csv (Default "data.csv")
   ```
-    * The `publisher` Can be started with (`java -jar publisher.jar`)
+    * The `Publisher` Can be started with (`java -jar publisher.jar`)
     * Java 8 is required
-    * The `publisher` require demo data, is inside of `./data/`  
+    * The `Publisher` require demo data, is inside of `./data/`  
 
 5. Deliverable:
 
 * The solution should contain:
     * Dockerfile to build your app
     * Dockerfile for the LoadBalancer functionality
-    * Dockerfile for `publisher`
+    * Dockerfile for `Publisher`
     * A script/provision functionality to bring it up locally on a UNIX machine with docker and test the functionality.
     * The write results of your app shold be stored outside of docker.
     
