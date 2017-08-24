@@ -1,6 +1,5 @@
 <center>
-     <h2>Cyber Security Venture - Stealth</h2> 
-     <h3>Software Engineer Challenge - Site Reliability</h3>
+     <h2>Software Engineer Challenge - Site Reliability</h2>
 </center>
  
 **Assignment:**
