@@ -92,8 +92,8 @@ Write an application `Consumer` to consume and write (inside of a text file) the
 
 6. Bonus Points when:
 
-* What are the critical structures of the application, what are the possible bottlenecks, what you had did when you had more time. We are curious of your thoughts! 
-* User Kubernetes or Swarm! 
+* What are the critical structures of the application, what are the possible bottlenecks, what you had did when you had more time? We are curious of your thoughts! 
+* Use Kubernetes or Swarm! 
 
 _The Bonus points don't have to be delivered on time - you can submit them later!_ 
 
